@@ -4,7 +4,6 @@ class RX11 < Formula
   url "https://cran.r-project.org/src/base/R-4/R-4.0.5.tar.gz"
   sha256 "0a3ee079aa772e131fe5435311ab627fcbccb5a50cabc54292e6f62046f1ffef"
   license "GPL-2.0-or-later"
-  revision 1
   
   env :std # Enables use of XQuartz headers
   
@@ -34,12 +33,13 @@ class RX11 < Formula
       "--enable-memory-profiling",
       "--with-cairo",
       "--with-x",
+      "--with-aqua",
       "--with-tcl-config=#{Formula["tcl-tk"].opt_lib}/tclConfig.sh",
       "--with-tk-config=#{Formula["tcl-tk"].opt_lib}/tkConfig.sh",
-      "--with-aqua",
       "--with-blas=-L#{Formula["openblas"].opt_lib} -lopenblas",
       "--with-lapack",
-      "--enable-R-shlib",
+      "--enable-R-framework=#{frameworks}", # To install as a framework. Implies --enable-R-shlib
+      # "--enable-R-shlib", # build R as a shared/dynamic library 
       "--disable-java",
     ]
     
