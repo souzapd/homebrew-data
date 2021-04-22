@@ -40,7 +40,7 @@ class RX11 < Formula
       "--with-blas=-L#{Formula["openblas"].opt_lib} -lopenblas",
       "--with-lapack"
       "--enable-R-shlib",
-      "--disable-java",
+      "--disable-java"
     ]
     
     # Don't remember Homebrew's sed shim
