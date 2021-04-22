@@ -6,11 +6,11 @@ class RX11 < Formula
   license "GPL-2.0-or-later"
   revision 1
   
-  
   env :std # Enables use of XQuartz headers
   
   depends_on "pkg-config" => :build
   depends_on "gcc" # for gfortran
+  depends_on "cairo"
   depends_on "gettext"
   depends_on "jpeg"
   depends_on "libpng"
@@ -105,8 +105,7 @@ class RX11 < Formula
                  shell_output("#{bin}/Rscript -e 'library(tcltk)' -e 'tclvalue(.Tcl(\"tk windowingsystem\"))'").chomp
 
     system bin/"Rscript", "-e", "install.packages('gss', '.', 'https://cloud.r-project.org')"
-    assert_predicate testpath/"gss/libs/gss.so", :exist?,
-                     "Failed to install gss package"
+    assert_predicate testpath/"gss/libs/gss.so", :exist?, "Failed to install gss package"
   end  
   
 end
