@@ -1,4 +1,4 @@
-# Homebrew formulae for Data Science
+# Setup
 
-## Available formulae
-- R with X11, Cairo support: ```brew install souzapd/data/r```
+1. Install XQuartz: ```brew install --cask xquartz```
+2. Install R with a custom formula: ```brew install souzapd/data/r```
