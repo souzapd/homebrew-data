@@ -38,8 +38,8 @@ class R < Formula
       "--with-tk-config=#{Formula["tcl-tk"].opt_lib}/tkConfig.sh",
       "--with-blas=-L#{Formula["openblas"].opt_lib} -lopenblas",
       "--with-lapack",
-      "--enable-R-framework", # To install as a framework. Implies --enable-R-shlib
-      # "--enable-R-shlib", # build R as a shared/dynamic library 
+      # "--enable-R-framework", # To install as a framework. Implies --enable-R-shlib => generates error
+      "--enable-R-shlib", # build R as a shared/dynamic library 
       "--disable-java",
     ]
     
