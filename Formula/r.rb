@@ -1,4 +1,4 @@
-class RX11 < Formula
+class R < Formula
   desc "Software environment for statistical computing"
   homepage "https://www.r-project.org/"
   url "https://cran.r-project.org/src/base/R-4/R-4.0.5.tar.gz"
