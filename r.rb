@@ -2,7 +2,7 @@ class R < Formula
   desc "Software environment for statistical computing"
   homepage "https://www.r-project.org/"
   url "https://cran.r-project.org/src/base/R-4/R-4.0.5.tar.gz"
-  sha256 "0a3ee079aa772e131fe5435311ab627fcbccb5a50cabc54292e6f62046f1ffef"
+  sha256 "138aec1aca27b7488c28f1dd86a4271cc45e85f5dc4a8a8fbd900d26dd827f0e"
   license "GPL-2.0-or-later"
   
   env :std # Enables use of XQuartz headers
