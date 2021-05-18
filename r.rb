@@ -5,6 +5,7 @@ class R < Formula
   sha256 "e8e68959d7282ca147360fc9644ada9bd161bab781bab14d33b8999a95182781"
   license "GPL-2.0-or-later"
   
+  
   env :std # Enables use of XQuartz headers
   
   depends_on "pkg-config" => :build
