@@ -1,8 +1,8 @@
 class R < Formula
   desc "Software environment for statistical computing"
   homepage "https://www.r-project.org/"
-  url "https://cran.r-project.org/src/base/R-4/R-4.1.0.tar.gz"
-  sha256 "e8e68959d7282ca147360fc9644ada9bd161bab781bab14d33b8999a95182781"
+  url "https://cran.r-project.org/src/base/R-4/R-4.1.1.tar.gz"
+  sha256 "515e03265752257d0b7036f380f82e42b46ed8473f54f25c7b67ed25bbbdd364"
   license "GPL-2.0-or-later"
   
   
@@ -86,8 +86,11 @@ class R < Formula
     lib.install_symlink Dir[r_home/"lib/*"]
 
     # avoid triggering mandatory rebuilds of r when gcc is upgraded
+    check_replace = true
+    
     inreplace lib/"R/etc/Makeconf", Formula["gcc"].prefix.realpath,
-                                    Formula["gcc"].opt_prefix    
+                                    Formula["gcc"].opt_prefix,
+                                    check_replace
     
   end
   
