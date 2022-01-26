@@ -1,8 +1,8 @@
 class R < Formula
   desc "Software environment for statistical computing"
   homepage "https://www.r-project.org/"
-  url "https://cran.r-project.org/src/base/R-4/R-4.1.1.tar.gz"
-  sha256 "515e03265752257d0b7036f380f82e42b46ed8473f54f25c7b67ed25bbbdd364"
+  url "https://cran.r-project.org/src/base/R-4/R-4.1.2.tar.gz"
+  sha256 "2036225e9f7207d4ce097e54972aecdaa8b40d7d9911cd26491fac5a0fab38af"
   license "GPL-2.0-or-later"
   
   
@@ -15,6 +15,7 @@ class R < Formula
   depends_on "jpeg"
   depends_on "libpng"
   depends_on "libtiff"
+  depends_on "libffi" # Used on the lastest brew formula
   depends_on "openblas"
   depends_on "pcre2"
   depends_on "readline"
