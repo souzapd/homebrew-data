@@ -15,6 +15,8 @@ class R < Formula
   depends_on "jpeg"
   depends_on "libpng"
   depends_on "libtiff"
+  depends_on "libx11" # test
+  depends_on "libffi" # Used on the lastest brew formula
   depends_on "openblas"
   depends_on "pcre2"
   depends_on "readline"
